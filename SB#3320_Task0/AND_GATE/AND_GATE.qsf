@@ -68,5 +68,6 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH And_Gate_Test_B
 set_global_assignment -name EDA_TEST_BENCH_NAME And_Gate_Test_Bench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id And_Gate_Test_Bench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME And_Gate_Test_Bench -section_id And_Gate_Test_Bench
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name EDA_TEST_BENCH_FILE And_Gate_Test_Bench.v -section_id And_Gate_Test_Bench
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
