@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Asus/Desktop/comb_ckt/comb_ckt_verilog.v
+source_file = 1, C:/Users/Asus/Desktop/comb_ckt/Mux_4_to_1.v
+source_file = 1, C:/Users/Asus/Desktop/comb_ckt/Mux_2_to_1.v
+source_file = 1, C:/Users/Asus/Desktop/comb_ckt/comb_ckt.bdf
+source_file = 1, C:/Users/Asus/Desktop/comb_ckt/Waveform.vwf
+source_file = 1, C:/Users/Asus/Desktop/comb_ckt/db/comb_ckt.cbx.xml
+design_name = Mux_2_to_1
+instance = comp, \y~output , y~output, Mux_2_to_1, 1
+instance = comp, \in1~input , in1~input, Mux_2_to_1, 1
+instance = comp, \in0~input , in0~input, Mux_2_to_1, 1
+instance = comp, \s0~input , s0~input, Mux_2_to_1, 1
+instance = comp, \y~0 , y~0, Mux_2_to_1, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1
