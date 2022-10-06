@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AND_GATE
-Wed Sep 14 22:34:28 2022
+Fri Sep 23 15:20:37 2022
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 14 22:34:28 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 23 15:20:37 2022       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; AND_GATE                                    ;
 ; Top-level Entity Name              ; AND_GATE                                    ;
@@ -151,8 +151,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -162,13 +162,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                 ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path   ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; AND_GATE.v                       ; yes             ; User Verilog HDL File  ; C:/Project/AND_GATE/AND_GATE.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; AND_GATE.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE/AND_GATE.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -258,14 +258,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Wed Sep 14 22:34:15 2022
+    Info: Processing started: Fri Sep 23 15:20:25 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AND_GATE -c AND_GATE
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file and_gate.v
-    Info (12023): Found entity 1: AND_GATE File: C:/Project/AND_GATE/AND_GATE.v Line: 1
+    Info (12023): Found entity 1: AND_GATE File: C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE/AND_GATE.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file and_gate_test_bench.v
-    Info (12023): Found entity 1: And_Gate_Test_Bench File: C:/Project/AND_GATE/And_Gate_Test_Bench.v Line: 2
+    Info (12023): Found entity 1: And_Gate_Test_Bench File: C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE/And_Gate_Test_Bench.v Line: 1
 Info (12127): Elaborating entity "AND_GATE" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -275,9 +275,9 @@ Info (21057): Implemented 4 device resources after synthesis - the final resourc
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 1 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4772 megabytes
-    Info: Processing ended: Wed Sep 14 22:34:28 2022
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 4748 megabytes
+    Info: Processing ended: Fri Sep 23 15:20:37 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:24
 
 

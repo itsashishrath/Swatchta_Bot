@@ -10,47 +10,49 @@
 # Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Project/AND_GATE {C:/Project/AND_GATE/AND_GATE.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE {C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE/AND_GATE.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:03:44 on Sep 21,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Project/AND_GATE" C:/Project/AND_GATE/AND_GATE.v 
+# Start time: 15:25:14 on Sep 23,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE" C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE/AND_GATE.v 
 # -- Compiling module AND_GATE
 # 
 # Top level modules:
 # 	AND_GATE
-# End time: 12:03:44 on Sep 21,2022, Elapsed time: 0:00:00
+# End time: 15:25:14 on Sep 23,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Project/AND_GATE {C:/Project/AND_GATE/And_Gate_Test_Bench.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE {C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE/And_Gate_Test_Bench.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:03:44 on Sep 21,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Project/AND_GATE" C:/Project/AND_GATE/And_Gate_Test_Bench.v 
+# Start time: 15:25:14 on Sep 23,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE" C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE/And_Gate_Test_Bench.v 
 # -- Compiling module And_Gate_Test_Bench
 # 
 # Top level modules:
 # 	And_Gate_Test_Bench
-# End time: 12:03:44 on Sep 21,2022, Elapsed time: 0:00:00
+# End time: 15:25:14 on Sep 23,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  And_Gate_Test_Bench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" And_Gate_Test_Bench 
-# Start time: 12:03:44 on Sep 21,2022
+# Start time: 15:25:14 on Sep 23,2022
 # Loading work.And_Gate_Test_Bench
 # Loading work.AND_GATE
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# Load canceled
-run -all
-run
-restart
-restart
-run
-run -all
-run
-# End time: 12:09:06 on Sep 21,2022, Elapsed time: 0:05:22
-# Errors: 1, Warnings: 0
+# ** Error: (vsim-3063) C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE/And_Gate_Test_Bench.v(5): Port 'c' not found in the connected module (3rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /And_Gate_Test_Bench/uut File: C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE/AND_GATE.v
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./AND_GATE_run_msim_rtl_verilog.do PAUSED at line 12
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" work.And_Gate_Test_Bench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" work.And_Gate_Test_Bench 
+# Start time: 15:25:14 on Sep 23,2022
+# Loading work.And_Gate_Test_Bench
+# Loading work.AND_GATE
+# ** Error: (vsim-3063) C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE/And_Gate_Test_Bench.v(5): Port 'c' not found in the connected module (3rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /And_Gate_Test_Bench/uut File: C:/Users/Harshal/Desktop/eyrc22_sb-3320/SB#3320_Task0/AND_GATE/AND_GATE.v
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./AND_GATE_run_msim_rtl_verilog.do PAUSED at line 12
+# End time: 15:50:37 on Sep 23,2022, Elapsed time: 0:25:23
+# Errors: 2, Warnings: 0
