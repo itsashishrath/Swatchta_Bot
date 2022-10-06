@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -1.481
+TNS   : -11.848
+
+Type  : Slow 1200mV 85C Model Setup 'ip_sig'
+Slack : -0.286
+TNS   : -1.485
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.558
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ip_sig'
+Slack : 0.655
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -11.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ip_sig'
+Slack : -3.000
+TNS   : -11.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -1.384
+TNS   : -11.072
+
+Type  : Slow 1200mV 0C Model Setup 'ip_sig'
+Slack : -0.212
+TNS   : -0.952
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.501
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ip_sig'
+Slack : 0.648
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -11.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ip_sig'
+Slack : -3.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.843
+TNS   : -6.744
+
+Type  : Fast 1200mV 0C Model Setup 'ip_sig'
+Slack : 0.351
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ip_sig'
+Slack : 0.252
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ip_sig'
+Slack : -3.000
+TNS   : -11.800
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -11.456
+
+------------------------------------------------------------
