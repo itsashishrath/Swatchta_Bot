@@ -1,0 +1,9 @@
+
+State Machine - |path_planner|state
+Name state.path_tracing state.path_updater state.nextnode_finder state.initial_distance state.path_out state.initialise 
+state.initialise 0 0 0 0 0 0 
+state.path_out 0 0 0 0 1 1 
+state.initial_distance 0 0 0 1 0 1 
+state.nextnode_finder 0 0 1 0 0 1 
+state.path_updater 0 1 0 0 0 1 
+state.path_tracing 1 0 0 0 0 1 
