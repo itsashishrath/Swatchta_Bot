@@ -1,0 +1,4 @@
+Warning (10268): Verilog HDL information at sb_3320_path_planner.v(70): always construct contains both blocking and non-blocking assignments File: C:/Users/Harshal/Desktop/e-yantra/SB#3320_Task4/sb_3320_path_planner.v Line: 70
+Warning (10268): Verilog HDL information at sb_3320_color_sensor.v(28): always construct contains both blocking and non-blocking assignments File: C:/Users/Harshal/Desktop/e-yantra/SB#3320_Task4/sb_3320_color_sensor.v Line: 28
+Warning (10268): Verilog HDL information at sb_3320_color_sensor.v(40): always construct contains both blocking and non-blocking assignments File: C:/Users/Harshal/Desktop/e-yantra/SB#3320_Task4/sb_3320_color_sensor.v Line: 40
+Warning (10268): Verilog HDL information at sb_3320_pick_place.v(31): always construct contains both blocking and non-blocking assignments File: C:/Users/Harshal/Desktop/e-yantra/SB#3320_Task4/sb_3320_pick_place.v Line: 31

@@ -1,0 +1,61 @@
+
+State Machine - |SB_3320_Swatchta_bot|state
+Name state.place state.pick state.color_sensor_read state.bot_turning state.update_counter state.line_follow state.path_planning state.path_forming state.path_start state.initialise 
+state.initialise 0 0 0 0 0 0 0 0 0 0 
+state.path_start 0 0 0 0 0 0 0 0 1 1 
+state.path_forming 0 0 0 0 0 0 0 1 0 1 
+state.path_planning 0 0 0 0 0 0 1 0 0 1 
+state.line_follow 0 0 0 0 0 1 0 0 0 1 
+state.update_counter 0 0 0 0 1 0 0 0 0 1 
+state.bot_turning 0 0 0 1 0 0 0 0 0 1 
+state.color_sensor_read 0 0 1 0 0 0 0 0 0 1 
+state.pick 0 1 0 0 0 0 0 0 0 1 
+state.place 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |SB_3320_Swatchta_bot|motor_turn_state
+Name motor_turn_state.motor_follow_line motor_turn_state.color_motor_state motor_turn_state.bot_turn_state 
+motor_turn_state.motor_follow_line 0 0 0 
+motor_turn_state.bot_turn_state 1 0 1 
+motor_turn_state.color_motor_state 1 1 0 
+
+State Machine - |SB_3320_Swatchta_bot|SB_3320_pick_place:pick_place_obj|state
+Name state.arm_open state.000000 state.001000 state.grab state.pick 
+state.000000 0 0 0 0 0 
+state.arm_open 1 1 0 0 0 
+state.pick 0 1 0 0 1 
+state.grab 0 1 0 1 0 
+state.001000 0 1 1 0 0 
+
+State Machine - |SB_3320_Swatchta_bot|SB_3320_pick_place:pick_place_obj|state_2
+Name state_2.000000 state_2.001000 state_2.arm_open state_2.arm_up 
+state_2.000000 0 0 0 0 
+state_2.arm_up 1 0 0 1 
+state_2.arm_open 1 0 1 0 
+state_2.001000 1 1 0 0 
+
+State Machine - |SB_3320_Swatchta_bot|SB_3320_color_sensor:color_sensor_obj|PS
+Name PS.count_zero_3 PS.disp_blue PS.enable_blue PS.count_zero_2 PS.disp_green PS.enable_green PS.count_zero_1 PS.disp_red PS.enable_red PS.idle 
+PS.idle 0 0 0 0 0 0 0 0 0 0 
+PS.enable_red 0 0 0 0 0 0 0 0 1 1 
+PS.disp_red 0 0 0 0 0 0 0 1 0 1 
+PS.count_zero_1 0 0 0 0 0 0 1 0 0 1 
+PS.enable_green 0 0 0 0 0 1 0 0 0 1 
+PS.disp_green 0 0 0 0 1 0 0 0 0 1 
+PS.count_zero_2 0 0 0 1 0 0 0 0 0 1 
+PS.enable_blue 0 0 1 0 0 0 0 0 0 1 
+PS.disp_blue 0 1 0 0 0 0 0 0 0 1 
+PS.count_zero_3 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |SB_3320_Swatchta_bot|SB_3320_map_direction:map_direction_obj|state
+Name state.s2 
+state.s1 0 
+state.s2 1 
+
+State Machine - |SB_3320_Swatchta_bot|SB_3320_path_planner:path_planner_obj|state
+Name state.path_tracing state.path_updater state.nextnode_finder state.initial_distance state.path_out state.initialise 
+state.initialise 0 0 0 0 0 0 
+state.path_out 0 0 0 0 1 1 
+state.initial_distance 0 0 0 1 0 1 
+state.nextnode_finder 0 0 1 0 0 1 
+state.path_updater 0 1 0 0 0 1 
+state.path_tracing 1 0 0 0 0 1 
