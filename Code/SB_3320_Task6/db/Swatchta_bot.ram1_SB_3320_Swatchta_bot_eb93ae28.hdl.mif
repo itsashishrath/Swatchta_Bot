@@ -1,0 +1,20 @@
+-- begin_signature
+-- SB_3320_Swatchta_bot
+-- end_signature
+WIDTH=5;
+DEPTH=9;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	8 :	00011;
+	7 :	00100;
+	6 :	01000;
+	5 :	01110;
+	4 :	01010;
+	3 :	11000;
+	2 :	11001;
+	1 :	10101;
+	0 :	10011;
+END;

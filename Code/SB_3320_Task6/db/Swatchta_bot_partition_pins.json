@@ -1,0 +1,313 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "din",
+					"strict" : false
+				},
+				{
+					"name" : "adc_sck",
+					"strict" : false
+				},
+				{
+					"name" : "sensor_l",
+					"strict" : false
+				},
+				{
+					"name" : "sensor_m",
+					"strict" : false
+				},
+				{
+					"name" : "sensor_r",
+					"strict" : false
+				},
+				{
+					"name" : "motor_turn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_turn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "l_motor",
+					"strict" : false
+				},
+				{
+					"name" : "r_motor",
+					"strict" : false
+				},
+				{
+					"name" : "gndl",
+					"strict" : false
+				},
+				{
+					"name" : "gndr",
+					"strict" : false
+				},
+				{
+					"name" : "bot_turns[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bot_turns[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bot_turns[2]",
+					"strict" : false
+				},
+				{
+					"name" : "S0",
+					"strict" : false
+				},
+				{
+					"name" : "S2",
+					"strict" : false
+				},
+				{
+					"name" : "S3",
+					"strict" : false
+				},
+				{
+					"name" : "red_led",
+					"strict" : false
+				},
+				{
+					"name" : "blue_led",
+					"strict" : false
+				},
+				{
+					"name" : "green_led",
+					"strict" : false
+				},
+				{
+					"name" : "red[0]",
+					"strict" : false
+				},
+				{
+					"name" : "red[1]",
+					"strict" : false
+				},
+				{
+					"name" : "red[2]",
+					"strict" : false
+				},
+				{
+					"name" : "red[3]",
+					"strict" : false
+				},
+				{
+					"name" : "red[4]",
+					"strict" : false
+				},
+				{
+					"name" : "red[5]",
+					"strict" : false
+				},
+				{
+					"name" : "red[6]",
+					"strict" : false
+				},
+				{
+					"name" : "red[7]",
+					"strict" : false
+				},
+				{
+					"name" : "red[8]",
+					"strict" : false
+				},
+				{
+					"name" : "red[9]",
+					"strict" : false
+				},
+				{
+					"name" : "green[0]",
+					"strict" : false
+				},
+				{
+					"name" : "green[1]",
+					"strict" : false
+				},
+				{
+					"name" : "green[2]",
+					"strict" : false
+				},
+				{
+					"name" : "green[3]",
+					"strict" : false
+				},
+				{
+					"name" : "green[4]",
+					"strict" : false
+				},
+				{
+					"name" : "green[5]",
+					"strict" : false
+				},
+				{
+					"name" : "green[6]",
+					"strict" : false
+				},
+				{
+					"name" : "green[7]",
+					"strict" : false
+				},
+				{
+					"name" : "green[8]",
+					"strict" : false
+				},
+				{
+					"name" : "green[9]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[0]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[1]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[2]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[3]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[4]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[5]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[6]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[7]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[8]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[9]",
+					"strict" : false
+				},
+				{
+					"name" : "state_status[0]",
+					"strict" : false
+				},
+				{
+					"name" : "state_status[1]",
+					"strict" : false
+				},
+				{
+					"name" : "state_status[2]",
+					"strict" : false
+				},
+				{
+					"name" : "state_status[3]",
+					"strict" : false
+				},
+				{
+					"name" : "arm_done[0]",
+					"strict" : false
+				},
+				{
+					"name" : "arm_done[1]",
+					"strict" : false
+				},
+				{
+					"name" : "arm",
+					"strict" : false
+				},
+				{
+					"name" : "up",
+					"strict" : false
+				},
+				{
+					"name" : "extend",
+					"strict" : false
+				},
+				{
+					"name" : "data_index[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_index[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_index[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_index[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_index[4]",
+					"strict" : false
+				},
+				{
+					"name" : "white_red",
+					"strict" : false
+				},
+				{
+					"name" : "white_green",
+					"strict" : false
+				},
+				{
+					"name" : "white_blue",
+					"strict" : false
+				},
+				{
+					"name" : "tx",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "OUT",
+					"strict" : false
+				},
+				{
+					"name" : "dout",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
