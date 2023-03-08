@@ -80,7 +80,7 @@ always@(posedge clk)begin
 			cost[3][0]=infinity; cost[3][1]=infinity; cost[3][2]=8'd1; cost[3][3]=infinity; cost[3][4]=infinity; cost[3][5]=infinity; cost[3][6]=infinity; cost[3][7]=infinity; cost[3][8]=infinity; cost[3][9]=infinity; cost[3][10]=infinity; 
 			cost[3][11]=infinity; cost[3][12]=infinity; cost[3][13]=infinity; cost[3][14]=infinity; cost[3][15]=infinity; cost[3][16]=infinity; cost[3][17]=infinity; cost[3][18]=infinity; cost[3][19]=infinity; cost[3][20]=infinity; cost[3][21]=infinity; cost[3][22]=infinity; cost[3][23]=infinity; cost[3][24]=infinity; cost[3][25]=infinity; cost[3][26]=infinity;
 			cost[4][0]=infinity; cost[4][1]=infinity; cost[4][2]=infinity; cost[4][3]=infinity; cost[4][4]=infinity; cost[4][5]=infinity; cost[4][6]=8'd3; cost[4][7]=infinity; cost[4][8]=infinity; cost[4][9]=infinity; cost[4][10]=infinity; 
-			cost[4][11]=infinity; cost[4][12]=infinity; cost[4][13]=infinity; cost[4][14]=infinity; cost[4][15]=infinity; cost[4][16]=infinity; cost[4][17]=infinity; cost[4][18]=infinity; cost[4][19]=infinity; cost[4][20]=infinity; cost[4][21]=infinity; cost[4][22]=infinity; cost[4][23]=infinity; cost[4][24]=infinity; cost[4][25]=infinity; cost[4][26]=infinity;
+			cost[4][11]=infinity;  cost[4][12]=infinity; cost[4][13]=infinity; cost[4][14]=infinity; cost[4][15]=infinity; cost[4][16]=infinity; cost[4][17]=infinity; cost[4][18]=infinity; cost[4][19]=infinity; cost[4][20]=infinity; cost[4][21]=infinity; cost[4][22]=infinity; cost[4][23]=infinity; cost[4][24]=infinity; cost[4][25]=infinity; cost[4][26]=infinity;
 			cost[5][0]=infinity; cost[5][1]=infinity; cost[5][2]=8'd3; cost[5][3]=infinity; cost[5][4]=infinity; cost[5][5]=infinity; cost[5][6]=8'd1; cost[5][7]=infinity; cost[5][8]=infinity; cost[5][9]=8'd2; cost[5][10]=infinity; 
 			cost[5][11]=infinity; cost[5][12]=infinity; cost[5][13]=infinity; cost[5][14]=infinity; cost[5][15]=infinity; cost[5][16]=infinity; cost[5][17]=infinity; cost[5][18]=infinity; cost[5][19]=infinity; cost[5][20]=infinity; cost[5][21]=infinity; cost[5][22]=infinity; cost[5][23]=infinity; cost[5][24]=infinity; cost[5][25]=infinity; cost[5][26]=infinity;
 			cost[6][0]=infinity; cost[6][1]=infinity; cost[6][2]=infinity; cost[6][3]=infinity; cost[6][4]=8'd3; cost[6][5]=8'd1; cost[6][6]=infinity; cost[6][7]=infinity; cost[6][8]=infinity; cost[6][9]=infinity; cost[6][10]=infinity; 
@@ -119,10 +119,8 @@ always@(posedge clk)begin
 			temp_path[7]=5'd0;
 			temp_path[8]=5'd0;
 			temp_path[9]=5'd0;
-
-			done=1'b1;
 			state=path_out;
-							  
+			done=1'b1;			  
 								
 		  end	
 					

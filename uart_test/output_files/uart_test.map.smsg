@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at uart.v(82): always construct contains both blocking and non-blocking assignments File: C:/Users/Asus/Desktop/eyrc22_sb-3320/uart_test/uart.v Line: 82
+Warning (10268): Verilog HDL information at uart.v(104): always construct contains both blocking and non-blocking assignments File: C:/Users/Asus/Desktop/eyrc22_sb-3320/uart_test/uart.v Line: 104

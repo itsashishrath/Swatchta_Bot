@@ -1,0 +1,89 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "din",
+					"strict" : false
+				},
+				{
+					"name" : "adc_sck",
+					"strict" : false
+				},
+				{
+					"name" : "sensor_l",
+					"strict" : false
+				},
+				{
+					"name" : "sensor_m",
+					"strict" : false
+				},
+				{
+					"name" : "sensor_r",
+					"strict" : false
+				},
+				{
+					"name" : "motor_turn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_turn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "motor_turn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "l_motor",
+					"strict" : false
+				},
+				{
+					"name" : "r_motor",
+					"strict" : false
+				},
+				{
+					"name" : "gndl",
+					"strict" : false
+				},
+				{
+					"name" : "bot_turns[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bot_turns[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bot_turns[2]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50",
+					"strict" : false
+				},
+				{
+					"name" : "dout",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

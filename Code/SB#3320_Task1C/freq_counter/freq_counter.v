@@ -21,7 +21,11 @@ Warning: The error due to compatibility will not be entertained.
 module freq_counter(
 	input clk,
 	input ip_sig,
-
+	output s0,
+	output s1,
+	output s2,
+	output s3,
+	output red,
 	output reg [7:0] count = 0
 );
 
@@ -30,6 +34,11 @@ module freq_counter(
 
 
 reg [7:0] count_temp = 0;   // Defined a Variable for temporary count
+reg s0_data = 1;
+reg s1_data = 0;
+reg s2_data = 0;
+reg s3_data = 0;
+reg red_confirm = 0;
 always @ (posedge clk)
 begin
 if(ip_sig)
@@ -41,15 +50,26 @@ if(ip_sig)
  always @(negedge ip_sig )
  begin
  
- count<=count_temp;           // count will be declared according to the conditions which is mentioned above and count will take the value of count_temp.
+ count<=count_temp;
+           // count will be declared according to the conditions which is mentioned above and count will take the value of count_temp.
+if (count <= 200 && count >= 170) begin
+	red_confi
+	
+	
+	
+	
+	
+	
+	rm = 1;
+end else begin
+	red_confirm = 0;
+end
  end
-
-
-
-
-	
-	
-
+ assign s0 = s0_data;
+ assign s1 = s1_data;
+ assign s2 = s2_data;
+ assign s3 = s3_data;
+ assign red = red_confirm;
 ////////////////////////YOUR CODE ENDS HERE//////////////////////////
 endmodule
 ///////////////////////////////MODULE END S///////////////////////////
