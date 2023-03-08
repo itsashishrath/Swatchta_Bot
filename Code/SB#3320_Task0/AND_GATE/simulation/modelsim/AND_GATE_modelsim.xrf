@@ -1,8 +1,9 @@
 vendor_name = ModelSim
-source_file = 1, C:/Project/AND_GATE/AND_GATE.v
-source_file = 1, C:/Project/AND_GATE/Waveform.vwf
-source_file = 1, C:/Project/AND_GATE/And_Gate_Test_Bench.v
-source_file = 1, C:/Project/AND_GATE/db/AND_GATE.cbx.xml
+source_file = 1, C:/Users/Asus/Desktop/eyrc22_sb-3320/Code/SB#3320_Task0/AND_GATE/AND_GATE.v
+source_file = 1, C:/Users/Asus/Desktop/eyrc22_sb-3320/Code/SB#3320_Task0/AND_GATE/Waveform.vwf
+source_file = 1, C:/Users/Asus/Desktop/eyrc22_sb-3320/Code/SB#3320_Task0/AND_GATE/And_Gate_Test_Bench.v
+source_file = 1, C:/Users/Asus/Desktop/eyrc22_sb-3320/Code/SB#3320_Task0/AND_GATE/Waveform1.vwf
+source_file = 1, C:/Users/Asus/Desktop/eyrc22_sb-3320/Code/SB#3320_Task0/AND_GATE/db/AND_GATE.cbx.xml
 design_name = AND_GATE
 instance = comp, \C~output , C~output, AND_GATE, 1
 instance = comp, \B~input , B~input, AND_GATE, 1

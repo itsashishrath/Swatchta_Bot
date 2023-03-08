@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition"
 
-// DATE "09/14/2022 22:33:11"
+// DATE "01/10/2023 10:42:25"
 
 // 
 // Device: Altera EP4CE22F17C6 Package FBGA256
@@ -38,9 +38,9 @@ input 	B;
 output 	C;
 
 // Design Ports Information
-// C	=>  Location: PIN_D1,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// A	=>  Location: PIN_G5,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// B	=>  Location: PIN_F3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// C	=>  Location: PIN_A15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// A	=>  Location: PIN_J15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// B	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -65,7 +65,7 @@ hard_block auto_generated_inst(
 	.devclrn(devclrn),
 	.devoe(devoe));
 
-// Location: IOOBUF_X0_Y25_N9
+// Location: IOOBUF_X38_Y34_N16
 cycloneive_io_obuf \C~output (
 	.i(\C~0_combout ),
 	.oe(vcc),
@@ -78,7 +78,7 @@ defparam \C~output .bus_hold = "false";
 defparam \C~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOIBUF_X0_Y26_N15
+// Location: IOIBUF_X0_Y16_N8
 cycloneive_io_ibuf \B~input (
 	.i(B),
 	.ibar(gnd),
@@ -88,7 +88,7 @@ defparam \B~input .bus_hold = "false";
 defparam \B~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X0_Y24_N15
+// Location: IOIBUF_X53_Y14_N1
 cycloneive_io_ibuf \A~input (
 	.i(A),
 	.ibar(gnd),
@@ -98,20 +98,20 @@ defparam \A~input .bus_hold = "false";
 defparam \A~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X1_Y25_N16
+// Location: LCCOMB_X37_Y16_N8
 cycloneive_lcell_comb \C~0 (
 // Equation(s):
-// \C~0_combout  = (\B~input_o  & \A~input_o )
+// \C~0_combout  = (\B~input_o ) # (\A~input_o )
 
 	.dataa(gnd),
-	.datab(gnd),
-	.datac(\B~input_o ),
+	.datab(\B~input_o ),
+	.datac(gnd),
 	.datad(\A~input_o ),
 	.cin(gnd),
 	.combout(\C~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \C~0 .lut_mask = 16'hF000;
+defparam \C~0 .lut_mask = 16'hFFCC;
 defparam \C~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 

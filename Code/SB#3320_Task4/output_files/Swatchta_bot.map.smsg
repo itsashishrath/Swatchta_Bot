@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at SB3320_Swatchta_bot.v(198): always construct contains both blocking and non-blocking assignments File: C:/Users/Harshal/Desktop/e-yantra/SB#3320_Task4/SB3320_Swatchta_bot.v Line: 198
+Warning (10268): Verilog HDL information at sb3320_path_planner.v(70): always construct contains both blocking and non-blocking assignments File: C:/Users/Harshal/Desktop/e-yantra/SB#3320_Task4/sb3320_path_planner.v Line: 70

@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
 					"name" : "clk_50M",
 					"strict" : false
 				}

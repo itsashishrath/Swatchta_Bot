@@ -18,99 +18,174 @@ Warning: The error due to compatibility will not be entertained.
 
 //////////////////DO NOT MAKE ANY CHANGES IN MODULE//////////////////
 module uart(
+	input rst_n,
 	input clk_50M,	//50 MHz clock
 	output tx		//UART transmit output
 );
 ////////////////////////WRITE YOUR CODE FROM HERE////////////////////
 
-parameter s0 = 4'd0,      //Assing all the State to some default values.
-			 s1 = 4'd1,
-			 s2 = 4'd2,
-			 s3 = 4'd3,
-			 s4 = 4'd4;
+
+wire tx_clk;
+reg [13:0]clk_div;
+reg [7:0] tx_reg=8'hff;
+reg [2:0]track_count=3'd7;
+reg tx_temp;
+parameter idle=3'd0, start=3'd1,data=3'd2,stop1=3'd3,stop2=3'd4;
+reg [2:0]PS=idle,NS=idle;
+wire [7:0] data1 [7:0];
+
+assign data1[7]=8'h23;
+assign data1[6]=8'h2D;
+assign data1[5]=8'h4D;
+assign data1[4]=8'h2D;
+assign data1[3]=8'h31;
+assign data1[2]=8'h49;
+assign data1[1]=8'h42;
+assign data1[0]=8'h47;
+integer data_index=8;
 
 
-reg [0:8] counter;      		//Creating counter for creating baudRate clock
-wire clk_2;							//Creating a clk_2 according to baudRate provided.
-reg [0:7] tx_data [0:3];		//To store all data in array which we have to transmite.
-reg [0:3] state = s0;			//As we are using fsm approch for this problem we have use state.
-reg tx_temp;						//To store all output data temp for later assiging.
-reg [0:3]data_frame = 0;		//To keep track of how much data has been transmitted.
-reg [0:3]counter_2 = 0;		//To keep track of how much bits are trasmitted.
+
+ 
+// Clk Generation
+//always@(posedge clk_50M,negedge rst_n)
+//     begin
+//			if (!rst_n)
+//				clk_div <= 14'd0;
+//			else	
+//				
+//				if (clk_div < 14'd868)
+//					clk_div = clk_div + 14'd1;
+//				else
+//					 clk_div = 14'd0;
+//     end
+//
+//assign tx_clk = (clk_div < 14'd434)? 1'b0:1'b1;
 
 
-// define paramaters for UART transmitter
-parameter 
-duration_of_bits = 8680,
-clocks_per_bit = duration_of_bits/20;
+// 38400
+//always@(posedge clk_50M,negedge rst_n)
+//     begin
+//			if (!rst_n)
+//				clk_div <= 14'd0;
+//			else	
+//				
+//				if (clk_div < 14'd2604)
+//					clk_div = clk_div + 14'd1;
+//				else
+//					 clk_div = 14'd0;
+//     end
+//
+//assign tx_clk = (clk_div < 14'd1302)? 1'b0:1'b1;
 
+always@(posedge clk_50M,negedge rst_n)
+     begin
+			if (!rst_n)
+				clk_div <= 14'd0;
+			else	
+				
+				if (clk_div < 14'd2604)
+					clk_div = clk_div + 14'd1;
+				else
+					 clk_div = 14'd0;
+     end
 
-always @ (posedge clk_50M) begin  //Creating a new clk in accordance to baudRate provided.
-	if (counter < clocks_per_bit)
-		counter = counter + 9'd1;
+assign tx_clk = (clk_div < 14'd1302)? 1'b0:1'b1;
+
+always @(negedge tx_clk,negedge rst_n)
+begin
+	if (!rst_n)
+		PS <= idle;
 	else
-		counter = 9'd1;
-end
+		PS <= NS;
+end	
 
-
-assign clk_2 = (counter < 218)?1'b0:1'b1;		//Assiging new clk
-
-
-always @ (negedge clk_2) begin
-	
-	//Storing all data in 8 bit binary form.
-	tx_data[0] = 8'b11001010;//S
-	tx_data[1] = 8'b01000010;//B
-	tx_data[2] = 8'b01001100;//2
-	tx_data[3] = 8'b00001100;//0
-	
-	
-	case(state) 		//Using case to assing all the output in accordance with the task
-
-	s0: begin       			//s0 assing Ideal State which is 1.
-			tx_temp = 1'b1;
-			state <= s1;
-		 end
-		
-	s1: begin					//S1 assing Starting bit which is 0.
-			tx_temp = 1'b0;
-			state <= s2;
-		 end
-		
-	s2: begin 															//S2 assing our important data which we have to transmit 
-			if(counter_2 <= 7) begin
-				tx_temp = tx_data[data_frame][counter_2];		//Here we are assiging the 8 bit to the output.
-				counter_2 <= counter_2 + 4'd1;
-				if(counter_2 == 7) state <= s3;
-			end
-			
-		 end
-		
-	s3: begin											//s3 assign stop bit 1.
-			data_frame <= data_frame + 4'd1;
-			counter_2 <= 4'd0;
-			tx_temp = 1'b1;
-			state <= s4;
-		 end
-		
-	s4: begin 											//s4 assign stop bit 2 and our code remaing at this state after all data is transfered.
-			if (data_frame > 3) begin
-				tx_temp = 1'b1;
-			end
-			else begin
-				tx_temp = 1'b1;
-				state <= s1;
-			end
-		 end
-		
+always @(PS,track_count,tx_reg,data_index) begin
+	case(PS)
+//		prepare_data: begin
+//			data1[7]=8'h23;
+//			data1[6]=8'h2D;
+//			data1[5]=8'h4D;
+//			data1[4]=8'h2D;
+//			data1[3]=8'h31;
+//			data1[2]=8'h49;
+//			data1[1]=8'h42;
+//			data1[0]=8'h47;
+//			NS <= idle;
+//		end
+		idle: begin
+				NS <= start;
+				tx_temp <= 1'b1;
+		end	
+		start:
+			begin
+				NS <= data;
+				tx_temp <= 1'b0;
+			end	
+		data:
+			begin
+				if (track_count ==0)
+					NS <= stop1;
+				else
+					NS <= data;
+					tx_temp <= tx_reg[0];	
+			end	
+		stop1:
+			begin
+				NS <= stop2;
+				tx_temp <= 1'b1;
+			end	
+		default:
+				begin
+				if (data_index < 8)
+						NS <= start;
+				else
+						NS <= stop2;
+				tx_temp <= 1'b1;
+				end	
 	endcase
-	
-
 end
 
+assign tx = tx_temp;
 
-assign tx = tx_temp;					//Assiging our temp output to the main output.
+always @(negedge tx_clk)	
+begin
+	if (PS == start)
+		tx_reg <= data1[data_index];
+	else
+		if (PS == data)
+			tx_reg <= {1'b1,tx_reg[7:1]};
+		else
+			tx_reg <= tx_reg;
+end
+			
+always @(negedge tx_clk)	
+begin
+	if (PS == idle)
+		data_index <= 0;
+	else
+		if (PS == stop1)
+			data_index <= data_index + 1;
+		else
+			data_index <= data_index;
+end
+
+always @(negedge tx_clk)	
+begin
+	if (PS == idle)
+		track_count <= 3'd7;
+	else
+		if (PS == data)
+			track_count <= track_count - 3'd1;
+		else if (PS == stop1)
+			track_count <= 3'd7;
+end
+
 
 ////////////////////////YOUR CODE ENDS HERE//////////////////////////
 endmodule
+
+
+
+
 ///////////////////////////////MODULE ENDS///////////////////////////

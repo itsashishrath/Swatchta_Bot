@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uart
-Thu Nov 17 11:21:59 2022
+Thu Feb 02 12:42:11 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -13,14 +13,16 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |uart|state
+  8. State Machine - |uart|PS
   9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |uart
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
- 15. Analysis & Synthesis Suppressed Messages
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: Top-level Entity: |uart
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,16 +49,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 17 11:21:59 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb 02 12:42:11 2023       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; uart                                        ;
 ; Top-level Entity Name              ; uart                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 40                                          ;
-;     Total combinational functions  ; 39                                          ;
-;     Dedicated logic registers      ; 23                                          ;
-; Total registers                    ; 23                                          ;
-; Total pins                         ; 2                                           ;
+; Total logic elements               ; 123                                         ;
+;     Total combinational functions  ; 122                                         ;
+;     Dedicated logic registers      ; 62                                          ;
+; Total registers                    ; 62                                          ;
+; Total pins                         ; 3                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -155,26 +157,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                      ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
-; uart.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Harshal/Desktop/SB#3320_Task2B/uart/uart.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
+; uart.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Asus/Desktop/eyrc22_sb-3320/Code/SB#3320_Task2B/uart/uart.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -182,30 +184,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 40    ;
+; Estimated Total logic elements              ; 123   ;
 ;                                             ;       ;
-; Total combinational functions               ; 39    ;
+; Total combinational functions               ; 122   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 16    ;
-;     -- 3 input functions                    ; 6     ;
-;     -- <=2 input functions                  ; 17    ;
+;     -- 4 input functions                    ; 25    ;
+;     -- 3 input functions                    ; 15    ;
+;     -- <=2 input functions                  ; 82    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 31    ;
-;     -- arithmetic mode                      ; 8     ;
+;     -- normal mode                          ; 78    ;
+;     -- arithmetic mode                      ; 44    ;
 ;                                             ;       ;
-; Total registers                             ; 23    ;
-;     -- Dedicated logic registers            ; 23    ;
+; Total registers                             ; 62    ;
+;     -- Dedicated logic registers            ; 62    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 2     ;
+; I/O pins                                    ; 3     ;
 ;                                             ;       ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; rtl~0 ;
-; Maximum fan-out                             ; 14    ;
-; Total fan-out                               ; 178   ;
-; Average fan-out                             ; 2.70  ;
+; Maximum fan-out                             ; 48    ;
+; Total fan-out                               ; 508   ;
+; Average fan-out                             ; 2.67  ;
 +---------------------------------------------+-------+
 
 
@@ -214,23 +216,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |uart                      ; 39 (39)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |uart               ; uart        ; work         ;
+; |uart                      ; 122 (122)           ; 62 (62)                   ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |uart               ; uart        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------+
-; State Machine - |uart|state                                     ;
-+----------+----------+----------+----------+----------+----------+
-; Name     ; state.s3 ; state.s2 ; state.s1 ; state.s0 ; state.s4 ;
-+----------+----------+----------+----------+----------+----------+
-; state.s0 ; 0        ; 0        ; 0        ; 0        ; 0        ;
-; state.s1 ; 0        ; 0        ; 1        ; 1        ; 0        ;
-; state.s2 ; 0        ; 1        ; 0        ; 1        ; 0        ;
-; state.s3 ; 1        ; 0        ; 0        ; 1        ; 0        ;
-; state.s4 ; 0        ; 0        ; 0        ; 1        ; 1        ;
-+----------+----------+----------+----------+----------+----------+
++---------------------------------------------------------------+
+; State Machine - |uart|PS                                      ;
++----------+----------+---------+----------+---------+----------+
+; Name     ; PS.stop1 ; PS.data ; PS.start ; PS.idle ; PS.stop2 ;
++----------+----------+---------+----------+---------+----------+
+; PS.idle  ; 0        ; 0       ; 0        ; 0       ; 0        ;
+; PS.start ; 0        ; 0       ; 1        ; 1       ; 0        ;
+; PS.data  ; 0        ; 1       ; 0        ; 1       ; 0        ;
+; PS.stop1 ; 1        ; 0       ; 0        ; 1       ; 0        ;
+; PS.stop2 ; 0        ; 0       ; 0        ; 1       ; 1        ;
++----------+----------+---------+----------+---------+----------+
 
 
 +------------------------------------------------------------+
@@ -238,10 +240,9 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
-; state~7                               ; Lost fanout        ;
-; state~8                               ; Lost fanout        ;
-; state~10                              ; Lost fanout        ;
-; Total Number of Removed Registers = 3 ;                    ;
+; PS~4                                  ; Lost fanout        ;
+; PS~5                                  ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
 +---------------------------------------+--------------------+
 
 
@@ -250,29 +251,60 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 23    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 9     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Total registers                              ; 62    ;
+; Number of registers using Synchronous Clear  ; 14    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 19    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 41    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; tx_reg[0]                               ; 1       ;
+; track_count[2]                          ; 3       ;
+; track_count[1]                          ; 4       ;
+; track_count[0]                          ; 5       ;
+; data_index[3]                           ; 3       ;
+; tx_reg[1]                               ; 1       ;
+; tx_reg[2]                               ; 1       ;
+; tx_reg[3]                               ; 1       ;
+; tx_reg[4]                               ; 1       ;
+; tx_reg[5]                               ; 1       ;
+; tx_reg[6]                               ; 1       ;
+; tx_reg[7]                               ; 2       ;
+; Total number of inverted registers = 12 ;         ;
++-----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |uart|data_index[21]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |uart|tx_reg[0]            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |uart|track_count[2]       ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; Yes        ; |uart|tx_reg[1]            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
 +----------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |uart ;
-+------------------+-------+-------------------------------------------+
-; Parameter Name   ; Value ; Type                                      ;
-+------------------+-------+-------------------------------------------+
-; s0               ; 0000  ; Unsigned Binary                           ;
-; s1               ; 0001  ; Unsigned Binary                           ;
-; s2               ; 0010  ; Unsigned Binary                           ;
-; s3               ; 0011  ; Unsigned Binary                           ;
-; s4               ; 0100  ; Unsigned Binary                           ;
-; duration_of_bits ; 8680  ; Signed Integer                            ;
-; clocks_per_bit   ; 434   ; Signed Integer                            ;
-+------------------+-------+-------------------------------------------+
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; idle           ; 000   ; Unsigned Binary                             ;
+; start          ; 001   ; Unsigned Binary                             ;
+; data           ; 010   ; Unsigned Binary                             ;
+; stop1          ; 011   ; Unsigned Binary                             ;
+; stop2          ; 100   ; Unsigned Binary                             ;
++----------------+-------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -281,22 +313,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 2                           ;
-; cycloneiii_ff         ; 23                          ;
-;     SLD               ; 9                           ;
-;     plain             ; 14                          ;
-; cycloneiii_lcell_comb ; 39                          ;
-;     arith             ; 8                           ;
-;         2 data inputs ; 8                           ;
-;     normal            ; 31                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 16                          ;
+; boundary_port         ; 3                           ;
+; cycloneiii_ff         ; 62                          ;
+;     CLR               ; 5                           ;
+;     CLR SCLR          ; 14                          ;
+;     ENA               ; 41                          ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 122                         ;
+;     arith             ; 44                          ;
+;         2 data inputs ; 44                          ;
+;     normal            ; 78                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 36                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 25                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.80                        ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 3.21                        ;
 +-----------------------+-----------------------------+
 
 
@@ -315,32 +348,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Thu Nov 17 11:21:50 2022
+    Info: Processing started: Thu Feb 02 12:42:04 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart -c uart
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file uart.v
-    Info (12023): Found entity 1: uart File: C:/Users/Harshal/Desktop/SB#3320_Task2B/uart/uart.v Line: 20
+    Info (12023): Found entity 1: uart File: C:/Users/Asus/Desktop/eyrc22_sb-3320/Code/SB#3320_Task2B/uart/uart.v Line: 20
 Info (12127): Elaborating entity "uart" for the top level hierarchy
+Info (10264): Verilog HDL Case Statement information at uart.v(104): all case item expressions in this case statement are onehot File: C:/Users/Asus/Desktop/eyrc22_sb-3320/Code/SB#3320_Task2B/uart/uart.v Line: 104
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/Asus/Desktop/eyrc22_sb-3320/Code/SB#3320_Task2B/uart/output_files/uart.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 42 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+Info (21057): Implemented 126 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 40 logic cells
-Info (144001): Generated suppressed messages file C:/Users/Harshal/Desktop/SB#3320_Task2B/uart/output_files/uart.map.smsg
+    Info (21061): Implemented 123 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4761 megabytes
-    Info: Processing ended: Thu Nov 17 11:21:59 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Thu Feb 02 12:42:11 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Harshal/Desktop/SB#3320_Task2B/uart/output_files/uart.map.smsg.
+The suppressed messages can be found in C:/Users/Asus/Desktop/eyrc22_sb-3320/Code/SB#3320_Task2B/uart/output_files/uart.map.smsg.
 
 

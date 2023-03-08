@@ -1,5 +1,5 @@
 Flow report for AND_GATE
-Fri Sep 23 15:20:37 2022
+Tue Jan 10 10:42:25 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Sep 23 15:20:37 2022       ;
+; Flow Status                        ; Successful - Tue Jan 10 10:42:25 2023       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; AND_GATE                                    ;
 ; Top-level Entity Name              ; AND_GATE                                    ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1                                           ;
-;     Total combinational functions  ; 1                                           ;
-;     Dedicated logic registers      ; 0                                           ;
+; Total logic elements               ; 1 / 22,320 ( < 1 % )                        ;
+;     Total combinational functions  ; 1 / 22,320 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 0 / 22,320 ( 0 % )                          ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 3                                           ;
+; Total pins                         ; 3 / 154 ( 2 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/23/2022 15:20:26 ;
+; Start date & time ; 01/10/2023 10:41:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; AND_GATE            ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 272737616109753.166392662623228        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 185122851933438.167332751617684        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; And_Gate_Test_Bench               ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -107,8 +107,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4748 MB             ; 00:00:24                           ;
-; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:24                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4773 MB             ; 00:00:14                           ;
+; Fitter               ; 00:00:06     ; 1.0                     ; 6110 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4684 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 4881 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:00                           ;
+; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:19                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -117,7 +121,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Idx              ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; BilliBoi         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; BilliBoi         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; BilliBoi         ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; BilliBoi         ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; BilliBoi         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -125,6 +133,10 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off AND_GATE -c AND_GATE
+quartus_fit --read_settings_files=off --write_settings_files=off AND_GATE -c AND_GATE
+quartus_asm --read_settings_files=off --write_settings_files=off AND_GATE -c AND_GATE
+quartus_sta AND_GATE -c AND_GATE
+quartus_eda --read_settings_files=off --write_settings_files=off AND_GATE -c AND_GATE
 
 
 

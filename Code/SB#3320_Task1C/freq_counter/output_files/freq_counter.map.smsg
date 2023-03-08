@@ -1,1 +1,2 @@
-Warning (10268): Verilog HDL information at freq_counter_tb.v(40): always construct contains both blocking and non-blocking assignments File: D:/SB#3320_Task1C/freq_counter/simulation/modelsim/freq_counter_tb.v Line: 40
+Warning (10268): Verilog HDL information at freq_counter_tb.v(40): always construct contains both blocking and non-blocking assignments File: C:/Users/Asus/Desktop/eyrc22_sb-3320/Code/SB#3320_Task1C/freq_counter/simulation/modelsim/freq_counter_tb.v Line: 40
+Warning (10268): Verilog HDL information at freq_counter.v(50): always construct contains both blocking and non-blocking assignments File: C:/Users/Asus/Desktop/eyrc22_sb-3320/Code/SB#3320_Task1C/freq_counter/freq_counter.v Line: 50

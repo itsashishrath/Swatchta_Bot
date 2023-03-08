@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Feb 03 22:55:06 2023
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : Swatchta_bot
+Top-level Entity Name : SB3320_Swatchta_bot
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 3,752 / 22,320 ( 17 % )
+    Total combinational functions : 1,871 / 22,320 ( 8 % )
+    Dedicated logic registers : 2,942 / 22,320 ( 13 % )
+Total registers : 2942
+Total pins : 19 / 154 ( 12 % )
+Total virtual pins : 0
+Total memory bits : 354,871 / 608,256 ( 58 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

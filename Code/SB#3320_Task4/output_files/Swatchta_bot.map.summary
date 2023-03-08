@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Feb 03 22:54:52 2023
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : Swatchta_bot
+Top-level Entity Name : SB3320_Swatchta_bot
+Family : Cyclone IV E
+Total logic elements : 3,954
+    Total combinational functions : 1,868
+    Dedicated logic registers : 2,942
+Total registers : 2942
+Total pins : 19
+Total virtual pins : 0
+Total memory bits : 354,871
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
